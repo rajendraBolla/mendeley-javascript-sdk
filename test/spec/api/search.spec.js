@@ -61,8 +61,11 @@ describe('search api', function() {
                 expect(utilitiesMock.requestFun).toHaveBeenCalledWith(
                     jasmine.objectContaining({
                         method: 'GET',
-                        resource: '/search/groups',
-                        headers: { 'Accept': MIME_TYPES.GROUP_SEARCH_RESULTS }
+                        resource: '/search/v2/groups',
+                        headers: {
+                          'Accept': MIME_TYPES.GROUP_SEARCH_RESULTS,
+                          'Content-Type': MIME_TYPES.NULL
+                        }
                     })
                 );
             });
