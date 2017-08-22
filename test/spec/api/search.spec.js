@@ -63,8 +63,7 @@ describe('search api', function() {
                         method: 'GET',
                         resource: '/search/v2/groups',
                         headers: {
-                          'Accept': MIME_TYPES.GROUP_SEARCH_RESULTS,
-                          'Content-Type': MIME_TYPES.NULL
+                          'Accept': MIME_TYPES.GROUP_SEARCH_RESULTS
                         }
                     })
                 );
